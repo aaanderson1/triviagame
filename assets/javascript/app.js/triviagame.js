@@ -1,6 +1,5 @@
-
 var questions = [
-// question 1
+    // question 1
     {
         question: "Whose house did they live in?",
         answers: [
@@ -9,9 +8,10 @@ var questions = [
             "Dorothy's",
             "Sophia's",
         ],
-        correct_index: 1
+        correct_index: 1,
+        image_src: "assets/images/blanche.jpg"
     },
-// question 2
+    // question 2
     {
         question: "What city do they live in?",
         answers: [
@@ -20,9 +20,10 @@ var questions = [
             "Los Angeles, CA",
             "Miami, FL",
         ],
-        correct_index: 3
+        correct_index: 3,
+        image_src: "assets/images/blanche2.jpg"
     },
-// question 3
+    // question 3
     {
         question: "What is their go-to dessert?",
         answers: [
@@ -31,9 +32,10 @@ var questions = [
             "Cheesecake",
             "Macaroons",
         ],
-        correct_index: 2
+        correct_index: 2,
+        image_src: "assets/images/burtreynolds.jpg"
     },
-// question 4
+    // question 4
     {
         question: "Where is Rose from?",
         answers: [
@@ -42,9 +44,10 @@ var questions = [
             "St. Olaf, MN",
             "Nashville, TN",
         ],
-        correct_index: 2
+        correct_index: 2,
+        image_src: "assets/images/groupphoto2.jpg"
     },
-// question 5
+    // question 5
     {
         question: "What retirement home did Sophia live in?",
         answers: [
@@ -53,9 +56,10 @@ var questions = [
             "Sunrise Pointe",
             "Coral Gables",
         ],
-        "correct_index": 0
+        "correct_index": 0,
+        image_src: "assets/images/sophia.jpg"
     },
-// question 6
+    // question 6
     {
         question: "What was Rose's late husband's name?",
         answers: [
@@ -64,9 +68,10 @@ var questions = [
             "Ralph",
             "Alfred",
         ],
-        correct_index: 1
-        },
-// question 7
+        correct_index: 1,
+        image_src: "assets/images/groupphoto3.jpg"
+    },
+    // question 7
     {
         question: "Where is Sophia from?",
         answers: [
@@ -75,9 +80,10 @@ var questions = [
             "Venice, Italy",
             "Florence, Italy",
         ],
-        correct_index: 1
+        correct_index: 1,
+        image_src: "assets/images/sophia2.jpg"
     },
-// question 8
+    // question 8
     {
         question: "What is Dorothy's ex-husband's name?",
         answers: [
@@ -86,9 +92,10 @@ var questions = [
             "Lawrence",
             "Roland",
         ],
-        correct_index: 1
+        correct_index: 1,
+        image_src: "assets/images/dorothymad.jpg"
     },
-// question 9
+    // question 9
     {
         question: "When Blanche's house gets robbed, where does she find her jewelry?",
         answers: [
@@ -96,10 +103,11 @@ var questions = [
             "The Lanai",
             "Under the kitchen sink",
             "On the coffee table",
-            ],
-        correct_index: 0
+        ],
+        correct_index: 0,
+        image_src: "assets/images/groupphoto4.jpg"
     },
-// question 10
+    // question 10
     {
         question: "What was Sophia's late husband's name?",
         answers: [
@@ -108,18 +116,20 @@ var questions = [
             "Rupert",
             "Sal",
         ],
-        correct_index: 3
-        },
-// question 11
+        correct_index: 3,
+        image_src: "assets/images/jail.jpg"
+    },
+    // question 11
     {
         question: "True or False: Dorothy remarries her ex-husband",
         answers: [
             "True",
             "False",
         ],
-        correct_index: 1
-        },
-// question 12
+        correct_index: 1,
+        image_src: "assets/images/georgeclooney.jpg"
+    },
+    // question 12
     {
         question: "When did The Golden Girls air?",
         answers: [
@@ -128,29 +138,32 @@ var questions = [
             "1989 - 1993, 145 episodes, 6 seasons",
             "1987 - 1991, 125 episodes, 4 seasons",
         ],
-        correct_index: 1
-        },
-// question 13
+        correct_index: 1,
+        image_src: "assets/images/groupphoto5.jpg"
+    },
+    // question 13
     {
-     question: "True or False - The actresses who played Rose and Blanche were originally going to play opposite roles?",    
+        question: "True or False - The actresses who played Rose and Blanche were originally going to play opposite roles?",
         answers: [
             "True",
             "False",
         ],
-        correct_index: 0
+        correct_index: 0,
+        image_src: "assets/images/slater.jpg"
     },
-// question 14
+    // question 14
     {
-    question: "Who took the longest to have her makeup done for each episode?",
+        question: "Who took the longest to have her makeup done for each episode?",
         answers: [
             "Blanche",
             "Rose",
             "Dorothy",
             "Sophia",
         ],
-        correct_index: 3
+        correct_index: 3,
+        image_src: "assets/images/sophia.jpg"
     },
-// question 15
+    // question 15
     {
         question: "Which Golden Girl is still living, having outlived the rest?",
         answers: [
@@ -159,7 +172,8 @@ var questions = [
             "Bea Arthur, aka Dorothy, age 97",
             "Estelle Getty, aka Sophia, age 96",
         ],
-        correct_index: 1
+        correct_index: 1,
+        image_src: "assets/images/groupphoto2.jpg"
     },
 ];
 
@@ -167,9 +181,10 @@ var correctAnswers;
 var wrongAnswers;
 var playQuestions;
 var currentQuestion;
+
 function shuffleArray(array) {
     var newArray = array.slice();
-    for(var i = 0; i < newArray.length; ++i) {
+    for (var i = 0; i < newArray.length; ++i) {
         var randomIndex = Math.floor(Math.random() * newArray.length);
         var temp = newArray[randomIndex];
         newArray[randomIndex] = newArray[i];
@@ -178,6 +193,7 @@ function shuffleArray(array) {
     return newArray;
 
 }
+
 function setupQuestions() {
     correctAnswers = 0;
     wrongAnswers = 0;
@@ -192,6 +208,12 @@ var button1 = document.getElementById("button1");
 var button2 = document.getElementById("button2");
 var button3 = document.getElementById("button3");
 var button4 = document.getElementById("button4");
+var startPage = document.getElementById("start");
+var startButton = document.getElementById("start-button");
+var game = document.getElementById("game");
+var endPage = document.getElementById("end");
+var stats = document.getElementById("stats");
+var questionImage = document.getElementById("question-img");
 button1.addEventListener("click", () => {
     checkAnswer(0);
 });
@@ -204,18 +226,44 @@ button3.addEventListener("click", () => {
 button4.addEventListener("click", () => {
     checkAnswer(3);
 });
+var buttons = [button1, button2, button3, button4];
+
+startButton.addEventListener("click", () => {
+    reset();
+});
+
+var resetButtonEnd = document.getElementById("reset-button-end");
+resetButtonEnd.addEventListener("click", () => {
+    reset();
+});
 
 function selectQuestion() {
-    var questionObject = playQuestions[++currentQuestion];
+    if (++currentQuestion >= playQuestions.length) {
+        endGame();
+        return;
+    }
+
+    var questionObject = playQuestions[currentQuestion];
     question.innerHTML = questionObject.question;
-    button1.innerHTML = questionObject.answers[0];
-    button2.innerHTML = questionObject.answers[1];
-    button3.innerHTML = questionObject.answers[2];
-    button4.innerHTML = questionObject.answers[3];
+
+    questionImage.src = questionObject.image_src;
+
+    for (var i = 0; i < buttons.length; ++i) {
+        var button = buttons[i];
+        if (i >= questionObject.answers.length) {
+            button.style.display = "none";
+            continue;
+        } else {
+            button.style.display = "inline-block";
+        }
+        button.innerHTML = questionObject.answers[i];
+    }
+    resetTimer();
 }
+
 function checkAnswer(chosenIndex) {
     var correctIndex = playQuestions[currentQuestion].correct_index;
-    if(chosenIndex === correctIndex) {
+    if (chosenIndex === correctIndex) {
         ++correctAnswers;
     } else {
         ++wrongAnswers;
@@ -223,62 +271,65 @@ function checkAnswer(chosenIndex) {
     selectQuestion();
 }
 
-// //js for questions
-// for (var question of questions) {
-//     console.log(question.question);
-//     console.log("Answers: ");
-//     for (var answer of question.answers) {
-//         console.log(answer);
-//     }
-//     console.log(`Correct Answer: ${question.answers[question.correct_index]}`);
-// }
-
-// for (var question of questions) {
-//     console.log(question.question);
-//     console.log("Answers: ");
-//     for (var answer of question.answers) {
-//         console.log(answer);
-//     }
-//     console.log(`Correct Answer: ${question.answers[question.correct_index]}`);
-// }
 // timer section
 function timeStringFromSeconds(seconds) {
-  let m = Math.floor(seconds / 60);
-  let s = seconds % 60;
-  let h = Math.floor(m / 60);
-  m = m % 60;
-  return `${formatNumber(h)}:${formatNumber(m)}:${formatNumber(s)}`;
+    return `${formatNumber(seconds)}`;
 }
 
 function formatNumber(number) {
-  return `${number}`.padStart(2, '0');
+    return `${number}`.padStart(2, '0');
+}
+
+var intervalHandle;
+
+function clearTimerInterval() {
+    if (intervalHandle) {
+        clearInterval(intervalHandle);
+    }
+    intervalHandle = undefined;
+}
+
+function resetTimer() {
+    clearTimerInterval();
+    var timer = document.getElementById("timer");
+    var seconds = 15;
+    timer.innerHTML = timeStringFromSeconds(seconds);
+    intervalHandle = setInterval(() => {
+        seconds -= 1;
+        timer.innerHTML = timeStringFromSeconds(seconds);
+        checkTimerEnd(seconds);
+    }, 1000);
 }
 
 function reset() {
-    var timer = document.getElementById("timer");
+    startPage.style.display = "none";
+    endPage.style.display = "none";
+    game.style.display = "block";
     var resetButton = document.getElementById("reset-button");
-    let _seconds = 300;
-    timer.innerHTML = timeStringFromSeconds(_seconds);
-    let intervalHandle = setInterval(() => {
-        _seconds -= 1;
-        timer.innerHTML = timeStringFromSeconds(_seconds);
-        checkWinCondition(_seconds, intervalHandle);
-    }, 1000);
     resetButton.addEventListener("click", () => {
-        clearInterval(intervalHandle);
         reset();
     });
     setupQuestions();
 }
-reset();
 
-function youLose() {
-    alert("You lost!");
+function endGame() {
+    clearTimerInterval();
+    game.style.display = "none";
+    endPage.style.display = "block";
+    var percentage = Math.floor(correctAnswers / playQuestions.length * 100);
+    if (percentage < 50) {
+        stats.innerText = `Unfortunately you got ${percentage}% correct. Better luck next time.`;
+    } else if (percentage > 50 && percentage < 100) {
+        stats.innerText = `Great job you got ${percentage}% correct. Try to get 100% next time.`;
+    } else {
+        stats.innerText = `No one knows the girls better than you.`;
+    }
 }
-function checkWinCondition(seconds, intervalHandle) {
-    if(seconds <= 0) {
-        clearInterval(intervalHandle);
-        youLose();
-        reset();
+
+function checkTimerEnd(seconds, intervalHandle) {
+    if (seconds <= 0) {
+        clearTimerInterval();
+        ++wrongAnswers;
+        selectQuestion();
     }
 }

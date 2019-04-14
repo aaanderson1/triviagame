@@ -3,55 +3,75 @@
 <head>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 </head>
 
 <body>
     <div class="background">
         <div class="foreground">
-            <div class="header">
-            <h1>
-            Golden Girls Trivia Game
-            </h1>   
-            <h3>
-            5 Minute Countdown!
-            </h3>     
+            <div id="start" class="start">
+                    <h1>
+                        Golden Girls Trivia Game
+                    </h1>
+                    <div>
+                    <img src="assets/images/group-photo.jpg">
+                    </div>
+                    <div id="start-button" class="button">
+                        Start
+                    </div>
             </div>
-
-            <div id="play-area">
-                <div id="question" class="button">
-                    
-                </div>
-
-                <div id="button1">
-                    
-                </div>
-
-                <div id="button2">
-                    
-                </div>
-
-                <div id="button3">
-                    
-                </div>
-
-                <div id="button4">
-                    
-                </div>
+            <div id="end" class="end">
+                    <img src="assets/images/group-photo.jpg">
+                    <div id="stats" class="stats"></div>
+                    <div id="reset-button-end" class="reset-button">
+                        <span>
+                            Play again?
+                        </span>
+                    </div>
             </div>
+            <div id="game" class="header">
+                <h1>
+                    Golden Girls Trivia Game
+                </h1>
 
-            <div id="timer" class="timer">
-            00:00:00
-            </div>    
+                <img id="question-img" src="assets/images/group-photo.jpg">
 
-            <div id="reset-button" class="reset-button">
-            <span>
+                <div id="timer" class="timer">
+                    00
+                </div>
 
-            Play again?
-            
-            </span>
+                <div id="play-area">
+                    <div id="question" class="question">
+
+                    </div>
+
+                    <div>
+                    <div id="button1" class="button">
+
+                    </div>
+
+                    <div id="button2" class="button">
+
+                    </div>
+                    </div>
+
+                    <div>
+                    <div id="button3" class="button">
+
+                    </div>
+
+                    <div id="button4" class="button">
+
+                    </div>
+                    </div>
+                </div>
+
+                <div id="reset-button" class="reset-button">
+                    <span>
+                        Play again?
+                    </span>
+                </div>
+
             </div>
-
         </div>
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
