@@ -1,0 +1,35 @@
+.header {
+    font-size: 40px;
+    font-family: "arial bold";
+    color: palevioletred;
+    text-align: center;
+}
+
+.body {
+    font-size: 20px;
+    font-family: "Arial";
+    text-align: left;
+    color: darkblue;
+    background: url(../images/background.jpg);
+    background-color: #cccccc;
+}
+
+.foreground {
+    background-color: rgba(0, 0, 0, 0.751);
+}
+
+.timer {
+    color: orange;
+    text-align: center;
+    font-family: "arial";
+    font-size: 50px;
+    
+}
+
+.reset-button {
+    background-color: grey;
+    color: green;
+    text-align: center;
+    font-family: "arial";
+    font-size: 75px;
+}
