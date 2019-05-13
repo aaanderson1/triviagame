@@ -318,11 +318,11 @@ function endGame() {
     endPage.style.display = "block";
     var percentage = Math.floor(correctAnswers / playQuestions.length * 100);
     if (percentage < 50) {
-        stats.innerText = `Unfortunately you got ${percentage}% correct. Better luck next time.`;
+        stats.innerText = `Unfortunately you got ${percentage}% correct. Try again!`;
     } else if (percentage > 50 && percentage < 100) {
-        stats.innerText = `Great job you got ${percentage}% correct. Try to get 100% next time.`;
+        stats.innerText = `Great job! You got ${percentage}% correct. Play again to win!`;
     } else {
-        stats.innerText = `No one knows the girls better than you.`;
+        stats.innerText = `Perfect score! No one knows the girls better than you.`;
     }
 }
 
