@@ -3,7 +3,7 @@
 - - -
 ## Directions:
 
-• Directions: Click Start to begin. 
+• Click Start to begin. 
 
 • You have 15 seconds to answer each question. 
 
